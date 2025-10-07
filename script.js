@@ -7,17 +7,36 @@ function render (html) {
    Demo 1: Click (counter)
 -------------------------------- */
 let clickCount = 0
+document.getElementById('btnClick').addEventListener('click', () => { 
+   clickCount++
+   render(`Button clicked <strong>${clickCount}</strong> time(s).`)
+}) 
+
 
 
 /* --------------------------------------
    Demo 2: Double-click (toggle highlight)
 --------------------------------------- */
+const dblClickCard = document.getElementById('dblCard')
+dblClickCard.addEventListener('dblclick', () => {
+  dblClickCard.classList.toggle('activated')
 
+  const state = dblClickCard.classList.contains('activated') ? 'ON' : 'OFF'
+  render(`Card is <strong>${state}</strong>`)
+})
 
 /* --------------------------------
    Demo 3: Keypress (show key/code)
 --------------------------------- */
-
+const kbKey = document.getElementById('kbKey')
+const kbCode = document.getElementById('kbCode')
+ 
+document.addEventListener('keydown', (e) => { 
+  kbKey.textContent = e.key === ' ' ? 'Space' : e.key
+  kbCode.textContent = e.code
+  render(`You pressed <strong>${kbKey.textContent}</strong> (code: <strong>${kbCode.textContent}</strong>)`)
+})
+   
 
 /* ----------------------------------------
    Demo 4: Show Time (12-hour format + day)
@@ -29,6 +48,7 @@ let clickCount = 0
 -------------------------- */
 document.getElementById('btnClear').addEventListener('click', () => {
   render('<span class="text-secondary">Output cleared.</span>')
+  clickCount = 0
 })
 
 /* =================================================
