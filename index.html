@@ -14,6 +14,11 @@
 </head>
 
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="progress" style="height: 4px; border-radius: 0; position: fixed; top: 0; left: 0; right: 0; z-index: 1050;">
+        <div id="scrollBar" class="progress-bar" role="progressbar" style="width: 0%; background-color: #b45309;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
     <header class="py-4 border-bottom text-white">
         <div class="container">
             <h1 class="h4 m-0">🍂 JS Event Listeners Demo</h1>
@@ -32,7 +37,7 @@
                             <button id="btnClear" class="btn">Clear Output</button>
                         </div>
                         <p class="text-secondary small m-0">
-                            We’ll demo: click, double-click, keypress, and a one-shot time message.
+                            We'll demo: click, double-click, keypress, and a one-shot time message.
                         </p>
                     </div>
                 </div>
@@ -46,6 +51,18 @@
                     <div class="card-body text-center">
                         <h2 class="h6 text-uppercase text-secondary mb-2">Double-Click Card</h2>
                         <p class="mb-0">Double-click this card to toggle a strong highlight.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2.5: Hover Counter Card -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div id="hoverCard" class="card shadow hoverable">
+                    <div class="card-body text-center">
+                        <h2 class="h6 text-uppercase text-secondary mb-2">Hover Counter Card</h2>
+                        <p class="mb-0">Hover over this card to see the counter increase!</p>
                     </div>
                 </div>
             </div>

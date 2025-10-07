@@ -35,6 +35,14 @@ header{
   transform:translateY(-2px);
 }
 
+/* Hover highlight for the hover counter card */
+.hover-highlight{
+  background-color:#fef3c7;            /* warm amber background */
+  border:2px solid #d97706;            /* amber border */
+  box-shadow:0 0 0 0.25rem rgba(217,119,6,.25);
+  transform:translateY(-2px);
+}
+
 /* Distinct fall-colored buttons */
 #btnClick{
   background-color:#b45309; border-color:#9a3412; color:#fff;
